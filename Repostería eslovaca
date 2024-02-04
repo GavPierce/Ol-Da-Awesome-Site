@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Repostería Eslovaca</h1>
+
+<img src="https://pics.craiyon.com/2023-07-02/ffec85a49b70473abd79cd15c7cfdf5a.webp" width="350" height"300">
+<p> Why are capybaras so awesome!? 
+<div>
+The capybara is a giant rodent native to South America. It is the largest living rodent. Its close relatives include guinea pigs and rock cavies, and it is more distantly related to the agouti, the chinchilla, and the nutria. The capybara inhabits savannas and dense forests, and lives near bodies of water. It is a highly social species and can be found in groups as large as 100 individuals, but usually live in groups of 10–20 individuals.</p>
+<a href="https://www.youtube.com/shorts/9lOYm0UXgwI?feature=share">Click and relax with capybaras</a>
+
+</body>
+</html>
+
+<style>
+body {
+background-image: url("https://img.freepik.com/free-photo/frame-food-ingredients-baking-gently-pink-pastel-background-cooking-flat-lay-with-copy-space-top-view-baking-concept-flat-lay_127032-2200.jpg");
+background-size: cover;
+}
+h1 {
+  color: purple;
+  font-family:neucha-regular;
+  font-family:"Neucha", cursive;
+  font-weight:1000;
+  font-style:normal;
+  font-stretch: semi-expanded;
+  font-size: 400%;
+  text-align:center;
+  }
+
+</style>
