@@ -7,11 +7,11 @@
 <title>Page Title</title>
 </head>
 <body>
-  <nav>
+  <div class="topnav">
     <a href="./index.html">Home</a>
     <a href="./Panadería eslovaca">Panadería Eslovaca</a>
     <a href="./Repostería eslovaca">Repostería Eslovaca</a>
-  </nav>
+    </div>
 <h1>Repostería Eslovaca</h1>
 
 <div>
@@ -44,9 +44,32 @@ h1 {
   font-size: 400%;
   text-align:center;
   }
-  nav {
-    text-align: center;
-  }
+ 
+.topnav {
+  background-color: #c9cad4;
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: hsl(244, 89%, 14%);
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  border-right: 1px solid #0c0c0c;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: hsl(172, 74%, 49%);
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: hsl(158, 95%, 34%);
 img{float: left;
 }
 </style>
