@@ -14,13 +14,11 @@
 
       <div class="container">
     <a href="./Panadería eslovaca">
-        <img
-      src="images/Logo panadería letras.png"
+    <img class="img-logo" src="images/Logo panadería letras.png"
     >
     </a>
      <a href="./Repostería eslovaca">
-  <img
-    src="images/Logo repostería letras.png"
+  <img class="img-logo" src="images/Logo repostería letras.png"
   />
 </a>
 </div>
@@ -30,6 +28,8 @@
         Bienvenidos a nuestra Panadería y Repostería Eslovaca.
         Descubre el placer de probar nuestros deliciosos panes y dulces artesanales. 
         Todos nuestros productos están elaborados con ingredientes naturales de la mejor calidad. 
+       
+        <img class="img-nosotras" src="images/Nosotras.jpg" width="250" height="200">
       </div>
        </body>
 </html>
@@ -45,12 +45,18 @@
     background: beige;
   }
  
-  img {
+  .img-logo {
     width: 300px;
     border-radius: 20px;
     cursor: pointer;
+    
    }
-
+   .img-logo:hover {
+    transform: scale(1.2);
+  }
+  .img-nosotras  {
+   border-radius: 20px;
+  }
 
      .content {
     text-align: center;
@@ -68,7 +74,7 @@
   }
 
   </style>
-<script>
+ <script>
   var counter = 0;
   var count = document.querySelector(".count");
   count.innerHTML = counter;
