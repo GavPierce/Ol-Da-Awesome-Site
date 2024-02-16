@@ -6,6 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
 <title>Panadería Eslovaca</title>
 </head>
+
 <body>
   <div class="topnav">
     <a href="./index.html">Inicio</a>
@@ -16,21 +17,50 @@
 
 <p> Porque comprar nuestros productos!? </p>
 
-  <h3>Panes básicos</h3>
-  <img src="images/Panadería/pan con hierbas.jpg" width="300" height="250">
+
+  <h2>Panes básicos</h2>
+  <div class="productos">
+   <img src="images/Panadería/pan con hierbas.jpg" width="300" height="250">
+  <div class="desc">Pan con hierbas</div>
+</div>
+<div class="productos">
   <img src="images/Panadería/pan simple.jpg"width="300" height="250">
- 
-  <h3>Panes especiales</h3>
+  <div class="desc">Pan simple</div>
+  </div>
+
+
+  <h2>Panes especiales</h2>
+   <div class="productos">
   <img src="images/Panadería/pan de campo.jpg"width="300" height="250">
+  <div class="desc">Pan de campo</div>
+</div>
+<div class="productos">
   <img src="images/Panadería/pan de pizza.jpg"width="300" height="250">
+  <div class="desc">Pan de pizza</div>
+</div>
+<div class="productos">
   <img src="images/Panadería/pan de pita.jpg"width="300" height="250">
+  <div class="desc">Pan de pita</div>
+</div>
+<div class="productos">
   <img src="images/Panadería/focaccia.jpg"width="300" height="250">
-  
-  <h3>Pizza de fermentación lenta</h3>
+  <div class="desc">Focaccia</div>
+  </div>
+
+
+  <h2>Pizza de fermentación lenta</h2>
   <img class="img-gato" src="images/Panadería/Logo panadería gato.png">
+  
+  <div class="productos">
   <img src="images/Panadería/pizza hawaiana.jpg"width="300" height="250">
+  <div class="desc">Pizza hawaiana</div>
+</div>
+<div class="productos">
   <img src="images/Panadería/pizza pepperoni.jpg"width="300" height="250">
-  <hr>
+  <div class="desc">Pizza pepperoni</div>
+  </div>
+ 
+<hr>
   <a href="https://www.youtube.com/watch?v=v0hN3UP0PQo">Learn the names of baby animals</a>
 
 </body>
@@ -52,13 +82,18 @@ h1 {
   font-size: 400%;
   text-align:center;
   }
+
+  h2 {
+    color: hsl(258, 81%, 33%);
+    font-size: 30px;
+  }
+
    .img-gato {
     width: 250px;
    border-radius: 200px;
    float: left;
   }
-    
-    /* Add a black background color to the top navigation */
+      /* Add a black background color to the top navigation */
 .topnav {
   background-color: #c9cad4;
   overflow: hidden;
@@ -85,6 +120,24 @@ h1 {
 .topnav a.active {
   background-color: #04AA6D;
   color: hsl(158, 95%, 34%);
+}
+div.productos {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  height: auto;
+  display: inline-block;
+  }
+  
+  .img {
+  width: 100%;
+  height: auto;
+    }
+div.desc {
+  padding: 15px;
+  text-align: center;
+  background-color: aliceblue;
+  font-size: 25px;
 }
 
 </style>
