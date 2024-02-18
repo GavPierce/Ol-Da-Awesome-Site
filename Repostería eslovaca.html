@@ -12,19 +12,23 @@
     <a href="./Panadería eslovaca">Panadería Eslovaca</a>
     <a href="./Repostería eslovaca">Repostería Eslovaca</a>
     </div>
+    <img-logo src="images/reposteria/capy logo reposteria.jpg" width="100" height="100">
 <h1>Repostería Eslovaca</h1>
 
-<div>
 <p>
-<img src="https://t3.ftcdn.net/jpg/03/47/39/40/360_F_347394085_f40HeTsPyGQ2OQkyrVIm9xAWBXYW206X.jpg" width="220" height="200">
-Porque comprar nuestros productos!? Hay varias razones.
+Aquí encuantras todo lo que necesitas con tú cafecito.
 </p>
+<div class="productos">
+<img src="images/reposteria/pudines.jpg" width="300" height="250">
+<div class="desc">Pudines</div>
 </div>
-<div>
-<p>
+<div class="productos">
+<img src="images/reposteria/cupcakes.jpg" width="300" height="250">
+<div class="desc">Cupcakes</div>
+</div>
+
 <a href="https://www.youtube.com/shorts/9lOYm0UXgwI?feature=share">Click and relax with capybaras</a>
-</p>
-</div>
+
 
 </body>
 </html>
@@ -33,6 +37,7 @@ Porque comprar nuestros productos!? Hay varias razones.
 body {
 background-image: url("https://img.freepik.com/free-photo/frame-food-ingredients-baking-gently-pink-pastel-background-cooking-flat-lay-with-copy-space-top-view-baking-concept-flat-lay_127032-2200.jpg");
 background-size: cover;
+text-align: center;
 }
 
 h1 {
@@ -74,6 +79,26 @@ h1 {
   background-color: #04AA6D;
   color: hsl(158, 95%, 34%);
 }
-img{float: left;
+.img-logo {float: left;
+  border-radius: 20px;
+}
+p
+{font-size: larger;
+text-align: center;
+font-weight: bold;
+}
+div.productos {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  height: auto;
+  display: inline-block;
+}
+div.desc {
+  padding: 15px;
+  text-align: center;
+  background-color: #e2e5eb;
+  font-size: 25px;
+  font-weight: bold;
 }
 </style>
