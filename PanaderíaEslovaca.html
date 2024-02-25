@@ -38,11 +38,16 @@
       font-weight: bold;
       }
       
+    section {
+    padding: 20px 20px 50px;
+  }
+      
+
       /* Add a black background color to the top navigation */
   .topnav {
     background-color: #c9cad4;
     overflow: hidden;
-    text-align: center;
+    position: center;
     }
   
   /* Style the links inside the navigation bar */
@@ -69,25 +74,23 @@
     color: hsl(158, 95%, 34%);
   }
   div.productos img {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 250px;
     }
    
     div.productos {
     margin: 5px;
     border: 1px solid hsl(0, 11%, 77%);
     width: 300px;
-    height: 250px;
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   
-     }
+    }
 
   div.productos:hover {
    border: 1px solid #777;
 }
     
-   div.desc-es {
+   .desc-es {
     padding: 15px;
     text-align: center;
     font-size: 25px;
@@ -95,9 +98,10 @@
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: hwb(209 73% 5%);
+    width: 100%;
     }
 
-    div.desc-sk {
+    .desc-sk {
     padding: 15px;
     text-align: center;
     background-color: hwb(209 73% 5%);
@@ -105,7 +109,8 @@
     color: black;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
+    width: 100%;
+  }
 
     /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
@@ -192,11 +197,12 @@
     <a href="./ReposteríaEslovaca">&#127856;Repostería Eslovaca</a>
     </div>
  
-<hr>
+
 <header>
 <h1>Panadería Eslovaca</h1>
 </header>
-<hr>
+
+<section>
   <h2>Panes básicos</h2>
   <div class="productos">
    <img src="images/Panadería/pan con hierbas.jpg" alt="Pan con hierbas">
@@ -209,8 +215,9 @@
   <div class="desc-es">Pan simple</div>
   <div class="desc-sk">(Biely chlieb)</div>   
   </div>
+</section>
 
-<hr>
+<section>
   <h2>Panes especiales</h2>
    <div class="productos">
   <img src="images/Panadería/pan de campo.jpg" alt="Pan de campo">
@@ -232,8 +239,9 @@
   <div class="desc-es">Focaccia</div>
   <div class="desc-sk">(Focaccia)</div>
   </div>
+</section>
 
-<hr>
+<section>
   <h2>Pizza de fermentación lenta</h2>
   <div class="flip-box">
     <div class="flip-box-inner">
@@ -257,8 +265,8 @@
   <div class="desc-es">Pizza pepperoni</div>
   <div class="desc-sk">(Salámová pizza)</div>
   </div>
+</section>
 
-<hr>
   <footer>
     <p><i class="fa fa-whatsapp" style="font-size:24px"></i>
     +505 8128 2388</p>
@@ -268,7 +276,7 @@
       <i class="glyphicon glyphicon-envelope"></i>
       <a href="mailto:daniela.durec@gmail.com">daniela.durec@gmail.com</a>
   </footer>
-  <hr>
+
   <div class="baby-animals">
   <a href="https://www.youtube.com/watch?v=v0hN3UP0PQo">Learn the names of baby animals in English</a>
 </div>
