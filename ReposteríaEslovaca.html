@@ -118,6 +118,15 @@ h1 {
   background-color: #04AA6D;
   color: hsl(158, 95%, 34%);
 }
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 600 pixels */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    display: block;
+  }
+}
+
 .img-logo {
   border-radius: 20px;
   animation-fill-mode: none;
