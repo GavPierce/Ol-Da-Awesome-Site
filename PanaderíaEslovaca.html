@@ -23,17 +23,6 @@
     </a>
     </div>
 
-<script>
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}  
-</script>
 
 
 <header>
@@ -52,28 +41,16 @@ function myFunction() {
     </div>
   </div>
 
-    <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-      
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-      }
-      </script>
-      
+         
 
 <div class="productos">
   <img src="images/Panadería/pan simple.jpg" alt="Pan simple">
   <div class="desc-es">Pan simple</div>
   <div class="desc-sk">(Biely chlieb)</div>   
+  <button class="accordion">$</button>
+    <div class="panel">
+      <p>$6.00</p>
+    </div>
   </div>
 </section>
 
@@ -83,21 +60,37 @@ function myFunction() {
   <img src="images/Panadería/pan de campo.jpg" alt="Pan de campo">
   <div class="desc-es">Pan de campo</div>
   <div class="desc-sk">(Domáci chlieb)</div>
+  <button class="accordion">$</button>
+    <div class="panel">
+      <p>$14.00 (2 libras)</p>
+    </div>
 </div>
 <div class="productos">
   <img src="images/Panadería/pan de pizza.jpg" alt="Pan de pizza">
   <div class="desc-es">Pan de pizza</div>
   <div class="desc-sk">(Chlebová pizza)</div>
+  <button class="accordion">$</button>
+    <div class="panel">
+      <p>$18.00</p>
+    </div>
 </div>
 <div class="productos">
   <img src="images/Panadería/pan de pita.jpg" alt="Pan de pita">
   <div class="desc-es">Pan de pita</div>
   <div class="desc-sk">(Chlebové placky)</div>
+  <button class="accordion">$</button>
+    <div class="panel">
+      <p>$6.00 (5 unid.)</p>
+    </div>
 </div>
 <div class="productos">
   <img src="images/Panadería/focaccia.jpg" alt="Focaccia">
   <div class="desc-es">Focaccia</div>
   <div class="desc-sk">(Focaccia)</div>
+  <button class="accordion">$</button>
+    <div class="panel">
+      <p>$14.00</p>
+    </div>
   </div>
 </section>
 
@@ -119,13 +112,23 @@ function myFunction() {
   <img src="images/Panadería/pizza hawaiana.jpg" alt="Pizza hawaiana">
   <div class="desc-es">Pizza hawaiana</div>
   <div class="desc-sk">(Pizza hawai)</div>
+  <button class="accordion">$</button>
+    <div class="panel">
+      <p>$14.00</p>
+    </div>
 </div>
 <div class="productos">
   <img src="images/Panadería/pizza pepperoni.jpg" alt="Pizza pepperoni">
   <div class="desc-es">Pizza pepperoni</div>
   <div class="desc-sk">(Salámová pizza)</div>
+  <button class="accordion">$</button>
+    <div class="panel">
+      <p>$14.00</p>
+    </div>
   </div>
 </section>
+
+
 
   <footer>
     <p><i class="fa fa-whatsapp" style="font-size:24px"></i>
@@ -252,7 +255,7 @@ function myFunction() {
     width: 300px;
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
+     }
 
   div.productos:hover {
    border: 1px solid #777;
@@ -293,22 +296,20 @@ function myFunction() {
   transition: 0.4s;
   font-weight: bold;
   text-align: center;
-}
+    }
 
 .active, .accordion:hover {
   background-color: #ccc; 
 }
 
 .panel {
-  padding: 18px;
   display: none;
   background-color: white;
   width: 100%;
+  padding: 18px;
   text-align: center;
   font-weight: bold;
-  overflow: hidden;
-
-}
+   }
 
 
 
@@ -388,3 +389,31 @@ function myFunction() {
   }
   </style>
 
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
+
+<script>
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }  
+  </script>
