@@ -23,11 +23,11 @@
     </a>
     </div>
 
-
-
-<header>
-<h1>Panadería Eslovaca</h1>
-</header>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Panadería Eslovaca</h1>
+       </div>
+    </div>
 
 <section>
   <h2>Panes básicos</h2>
@@ -151,29 +151,35 @@
    text-align: center;
    background: #ebebbc;
    }
-   header {
-    text-align: center;
-    padding: 100px;
-    background-image: url(images/Panadería/background\ photo-klasy.jpg);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    }
+
+
+   .hero-image {
+  background-image: url("images/Panadería/background\ photo-klasy.jpg");
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+  
   h1 {
     color: hwb(258 1% 55%);
     font-family: Dancing Script, serif;
     text-align:center;
     font-size: 100px;
     font-weight: bold;
-     }
+         }
 
-     @media screen and (max-width: 600px) {
-  h1 {
-    font-size: 70px;
-    text-align: center;
-  }
-}
-  
+       
     h2 {
       color: hsl(258, 81%, 33%);
       font-size: 50px;
@@ -381,6 +387,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 60%;
      }
 
    div.baby-animals {
