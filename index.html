@@ -119,10 +119,14 @@ animation-iteration-count: infinite;
   height: 200px; /*should be the same height as the images*/
   box-sizing: border-box;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+  margin-left: 40%;
+  margin-top: 1%;
   }
+  @media screen and (max-width: 600px) {
+    .img-comp-container {
+      margin-left: 15%;
+  }
+}
 
 .img-comp-img {
   position: absolute;
@@ -130,11 +134,12 @@ animation-iteration-count: infinite;
   height: auto;
   overflow:hidden;
   border-radius: 20px;
+  
   }
 
 .img-comp-img img {
   display:block;
- 
+  
     }
 
 .img-comp-slider {
