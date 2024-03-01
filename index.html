@@ -10,7 +10,117 @@
     />
     <title>Productos artesanales de eslovacas</title>
     <link rel="icon" type="image/x-icon" href="/images/homepage/favicon.jpg">
+
+    <style>
+      .main-title {
+        color: #f1b13c;
+        font-family: Dancing Script, serif;
+        font-size: 100px;
+        padding: 20px;
+      }
+    
+      @media screen and (max-width: 600px) {
+      .main-title {
+        font-size: 80px;
+      }
+    }
+        body {
+        text-align: center;
+        background: beige;
+        margin: 20px;
+      }
+     
+      div.logos{
+      padding: 20px;
+    }
+      div.logos img {
+        width: 300px;
+        border-radius: 20px;
+        cursor: pointer;     
+       }
+       div.logos img:hover {
+        transform: scale(1.2);
+      }
+      .nosotras img  {
+       border-radius: 20px;
+       width: 100px;   
+       margin-bottom: 30px;
+      }
+       .nosotras img:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+         /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    }
+    @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+        div.nosotras {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: hwb(93 8% 32%);
+        border: 3px solid white;
+        border-radius: 10px;
+        background: #cecece8a;
+         }
+        
+     
+    .img-comp-container {
+      position: relative;
+      height: 200px; /*should be the same height as the images*/
+      box-sizing: border-box;
+      display: block;
+      margin-left: 40%;
+      margin-top: 1%;
+      }
+      @media screen and (max-width: 600px) {
+        .img-comp-container {
+          margin-left: 10%;
+      }
+    }
+    
+    .img-comp-img {
+      position: absolute;
+      width: auto;
+      height: auto;
+      overflow:hidden;
+      border-radius: 20px;
+      
+      }
+    
+    .img-comp-img img {
+      display:block;
+      
+        }
+    
+    .img-comp-slider {
+      position: absolute;
+      z-index:9;
+      cursor: ew-resize;
+      /*set the appearance of the slider:*/
+      width: 40px;
+      height: 40px;
+      background-color: #2196F3;
+      opacity: 0.7;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+    
+      </style>
+    
     </head>
+    
   <body>
    
     <h1 class="main-title">Productos artesanales</h1>
@@ -27,8 +137,8 @@
 
     <div class="nosotras">
         <p>Bienvenidos a nuestra Panadería y Repostería Eslovaca.</p>
-        <p>Descubre el placer de probar nuestros deliciosos panes y dulces artesanales. 
-        Todos nuestros productos están elaborados con ingredientes naturales de la mejor calidad.</p>
+        <p>Descubre el placer de probar nuestros deliciosos panes y dulces artesanales. </p>
+        <p>Todos nuestros productos están elaborados con ingredientes naturales de la mejor calidad.</p>
        <img src="images/homepage/Nosotras.jpg" alt="Nosotras">
     </div>
    
@@ -45,117 +155,6 @@
        </body>
 </html>
 
-<style>
-  .main-title {
-    color: #f1b13c;
-    font-family: Dancing Script, serif;
-    font-size: 100px;
-    padding: 20px;
-  }
-
-  @media screen and (max-width: 600px) {
-  .main-title {
-    font-size: 80px;
-  }
-}
-    body {
-    text-align: center;
-    background: beige;
-    margin: 20px;
-  }
- 
-  div.logos{
-  padding: 20px;
-}
-  div.logos img {
-    width: 300px;
-    border-radius: 20px;
-    cursor: pointer;     
-   }
-   div.logos img:hover {
-    transform: scale(1.2);
-  }
-  .nosotras img  {
-   border-radius: 20px;
-   width: 100px;   
-   margin-bottom: 50px;
-  }
-   .nosotras img:hover {
-/* Start the shake animation and make the animation last for 0.5 seconds */
-animation: shake 0.5s;
-     /* When the animation is finished, start again */
-animation-iteration-count: infinite;
-}
-@keyframes shake {
-0% { transform: translate(1px, 1px) rotate(0deg); }
-10% { transform: translate(-1px, -2px) rotate(-1deg); }
-20% { transform: translate(-3px, 0px) rotate(1deg); }
-30% { transform: translate(3px, 2px) rotate(0deg); }
-40% { transform: translate(1px, -1px) rotate(1deg); }
-50% { transform: translate(-1px, 2px) rotate(-1deg); }
-60% { transform: translate(-3px, 1px) rotate(0deg); }
-70% { transform: translate(3px, 1px) rotate(-1deg); }
-80% { transform: translate(-1px, -1px) rotate(1deg); }
-90% { transform: translate(1px, 2px) rotate(0deg); }
-100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-    div.nosotras {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: hwb(93 8% 32%);
-    border: 3px solid white;
-    border-radius: 10px;
-    background: #cecece8a;
-     }
-     p  {
-      padding: 10px;
-    }
-
- 
-
-.img-comp-container {
-  position: relative;
-  height: 200px; /*should be the same height as the images*/
-  box-sizing: border-box;
-  display: block;
-  margin-left: 40%;
-  margin-top: 1%;
-  }
-  @media screen and (max-width: 600px) {
-    .img-comp-container {
-      margin-left: 10%;
-  }
-}
-
-.img-comp-img {
-  position: absolute;
-  width: auto;
-  height: auto;
-  overflow:hidden;
-  border-radius: 20px;
-  
-  }
-
-.img-comp-img img {
-  display:block;
-  
-    }
-
-.img-comp-slider {
-  position: absolute;
-  z-index:9;
-  cursor: ew-resize;
-  /*set the appearance of the slider:*/
-  width: 40px;
-  height: 40px;
-  background-color: #2196F3;
-  opacity: 0.7;
-  border-radius: 50%;
-  vertical-align: middle;
-}
-
-  </style>
 
 <script>
   initComparisons();
