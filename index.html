@@ -41,12 +41,12 @@
        div.logos img:hover {
         transform: scale(1.2);
       }
-      .nosotras img  {
+      .inner-content img  {
        border-radius: 20px;
        width: 100px;   
-       margin-bottom: 30px;
-      }
-       .nosotras img:hover {
+        }
+
+       .inner-content img:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s;
          /* When the animation is finished, start again */
@@ -65,39 +65,38 @@
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
     }
-        div.nosotras {
-        text-align: center;
+        .flex-container {
         font-size: 20px;
         font-weight: bold;
         color: hwb(93 8% 32%);
         border: 3px solid white;
         border-radius: 10px;
         background: #cecece8a;
-         }
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px;
+        justify-content: space-between;
+
         
-     
+                 }
+     .inner-content    {
+      text-align: center;
+         }
+
     .img-comp-container {
       position: relative;
       height: 200px; /*should be the same height as the images*/
       box-sizing: border-box;
       display: block;
-      margin-left: 40%;
-      margin-top: 1%;
-      }
-      @media screen and (max-width: 600px) {
-        .img-comp-container {
-          margin-left: 10%;
-      }
-    }
-    
+        }
+       
     .img-comp-img {
       position: absolute;
       width: auto;
       height: auto;
       overflow:hidden;
       border-radius: 20px;
-      
-      }
+       }
     
     .img-comp-img img {
       display:block;
@@ -135,14 +134,15 @@
 </div>
 
 
-    <div class="nosotras">
+    <div class="flex-container">
+      <div class="inner-content">
         <p>Bienvenidos a nuestra Panadería y Repostería Eslovaca.</p>
-        <p>Descubre el placer de probar nuestros deliciosos panes y dulces artesanales. </p>
-        <p>Todos nuestros productos están elaborados con ingredientes naturales de la mejor calidad.</p>
+        <p>Descubre el placer de probar nuestros deliciosos panes y dulces artesanales.
+        Todos nuestros productos están elaborados con ingredientes naturales de la mejor calidad.</p>
+      
        <img src="images/homepage/Nosotras.jpg" alt="Nosotras">
     </div>
    
-
     <div class="img-comp-container">
       <div class="img-comp-img">
         <img src="images/homepage/Foccacia before.jpg" width="300" height="200">
@@ -151,7 +151,8 @@
         <img src="images/homepage/Foccacia after.jpg" width="300" height="200">
       </div>
     </div>
-     
+  </div>
+</div>
        </body>
 </html>
 
