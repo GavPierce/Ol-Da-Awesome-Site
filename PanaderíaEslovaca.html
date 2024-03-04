@@ -9,7 +9,8 @@
     rel="stylesheet"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Panadería Eslovaca</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Panadería Eslovaca</title>
 <link rel="icon" type="image/x-icon" href="/images/homepage/favicon.jpg">
 
 <style>
@@ -55,8 +56,16 @@
   background-color:  #ebebbc;
   overflow: hidden;
   text-align: center;
-  
+
+   
 }
+
+@media screen and (max-width: 600px) {
+.topnav {
+  display: none;
+}   
+}
+
 /* Style the links inside the navigation bar */
 .topnav a {
   color: hsl(244, 89%, 14%);
@@ -81,34 +90,6 @@
   color: hsl(158, 95%, 34%);
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
-
- /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
 
 
   div.productos img {
@@ -150,35 +131,7 @@
     width: 100%;
   }
 
-  .accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 20px;
-  transition: 0.4s;
-  font-weight: bold;
-  text-align: center;
-  }
-
-.active, .accordion:hover {
-  background-color: #ccc; 
-  }
-
-.panel {
-  display: none;
-  background-color: white;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  font-weight: bold;
-    }
-
-
+ 
 
     /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
@@ -269,12 +222,30 @@
     <a href="./index.html">&#127968;Inicio</a>
     <a href="./PanaderíaEslovaca">&#127838;Panadería Eslovaca</a>
     <a href="./ReposteríaEslovaca">&#127856;Repostería Eslovaca</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
     </div>
 
+    <!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">&times;</button>
+  <a href="#" class="w3-bar-item w3-button">&#127968;Inicio</a>
+  <a href="#" class="w3-bar-item w3-button">&#127838;Panadería Eslovaca</a>
+  <a href="#" class="w3-bar-item w3-button">&#127856;Repostería Eslovaca</a>
+</div>
 
+<!-- Page Content -->
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge w3-left w3-hide-large" onclick="w3_open()">☰</button>
+  </div>
+
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
 
 <header>
 <h1>Panadería Eslovaca</h1>
@@ -286,23 +257,34 @@
    <img src="images/Panadería/pan con hierbas.jpg" alt="Pan con hierbas">
   <div class="desc-es">Pan con hierbas</div>
   <div class="desc-sk">(Bylinkový chlieb)</div>
-    <button class="accordion">$</button>
-    <div class="panel">
-      <p>$6.00</p>
+ 
+  <div class="w3-container">
+    <button onclick="myFunction('Pan1')" class="w3-button w3-block w3-#ebebbc">
+      $</button>
+       <div id="Pan1" class="w3-hide w3-container w3-#ebebbc w3-center w3-animate-zoom">
+        <p>$6.00</p>
+      </div>
     </div>
   </div>
 
+  
          
 
 <div class="productos">
   <img src="images/Panadería/pan simple.jpg" alt="Pan simple">
   <div class="desc-es">Pan simple</div>
   <div class="desc-sk">(Biely chlieb)</div>   
-  <button class="accordion">$</button>
-    <div class="panel">
-      <p>$6.00</p>
+
+  <div class="w3-container">
+    <button onclick="myFunction('Pan2')" class="w3-button w3-block w3-#ebebbc">
+      $</button>
+       <div id="Pan2" class="w3-hide w3-container w3-#ebebbc w3-center w3-animate-zoom">
+        <p>$6.00</p>
+      </div>
     </div>
   </div>
+
+
 </section>
 
 <section>
@@ -311,38 +293,63 @@
   <img src="images/Panadería/pan de campo.jpg" alt="Pan de campo">
   <div class="desc-es">Pan de campo</div>
   <div class="desc-sk">(Domáci chlieb)</div>
-  <button class="accordion">$</button>
-    <div class="panel">
-      <p>$14.00 (2 libras)</p>
+
+  <div class="w3-container">
+    <button onclick="myFunction('Pan3')" class="w3-button w3-block w3-#ebebbc">
+      $</button>
+       <div id="Pan3" class="w3-hide w3-container w3-#ebebbc w3-center w3-animate-zoom">
+        <p>$14.00 (2 libras)</p>
+      </div>
     </div>
-</div>
+  </div>
+
+  
+
 <div class="productos">
   <img src="images/Panadería/pan de pizza.jpg" alt="Pan de pizza">
   <div class="desc-es">Pan de pizza</div>
   <div class="desc-sk">(Chlebová pizza)</div>
-  <button class="accordion">$</button>
-    <div class="panel">
-      <p>$18.00</p>
+
+  <div class="w3-container">
+    <button onclick="myFunction('Pan4')" class="w3-button w3-block w3-#ebebbc">
+      $</button>
+       <div id="Pan4" class="w3-hide w3-container w3-#ebebbc w3-center w3-animate-zoom">
+        <p>$18.00</p>
+      </div>
     </div>
-</div>
+  </div>
+
+ 
 <div class="productos">
   <img src="images/Panadería/pan de pita.jpg" alt="Pan de pita">
   <div class="desc-es">Pan de pita</div>
   <div class="desc-sk">(Chlebové placky)</div>
-  <button class="accordion">$</button>
-    <div class="panel">
-      <p>$6.00 (5 unid.)</p>
+
+  <div class="w3-container">
+    <button onclick="myFunction('Pan5')" class="w3-button w3-block w3-#ebebbc">
+      $</button>
+       <div id="Pan5" class="w3-hide w3-container w3-#ebebbc w3-center w3-animate-zoom">
+        <p>$6.00 (5 unid.)</p>
+      </div>
     </div>
-</div>
+  </div>
+
+  
 <div class="productos">
   <img src="images/Panadería/focaccia.jpg" alt="Focaccia">
   <div class="desc-es">Focaccia</div>
   <div class="desc-sk">(Focaccia)</div>
-  <button class="accordion">$</button>
-    <div class="panel">
-      <p>$14.00</p>
+
+  <div class="w3-container">
+    <button onclick="myFunction('Pan6')" class="w3-button w3-block w3-#ebebbc">
+      $</button>
+       <div id="Pan6" class="w3-hide w3-container w3-#ebebbc w3-center w3-animate-zoom">
+        <p>$14.00</p>
+      </div>
     </div>
   </div>
+
+  
 </section>
 
 <section>
@@ -363,20 +370,32 @@
   <img src="images/Panadería/pizza hawaiana.jpg" alt="Pizza hawaiana">
   <div class="desc-es">Pizza hawaiana</div>
   <div class="desc-sk">(Pizza hawai)</div>
-  <button class="accordion">$</button>
-    <div class="panel">
-      <p>$14.00</p>
+
+  <div class="w3-container">
+    <button onclick="myFunction('Pizza1')" class="w3-button w3-block w3-#ebebbc">
+      $</button>
+       <div id="Pizza1" class="w3-hide w3-container w3-#ebebbc w3-center w3-animate-zoom">
+        <p>$14.00</p>
+      </div>
     </div>
-</div>
+  </div>
+
+ 
 <div class="productos">
   <img src="images/Panadería/pizza pepperoni.jpg" alt="Pizza pepperoni">
   <div class="desc-es">Pizza pepperoni</div>
   <div class="desc-sk">(Salámová pizza)</div>
-  <button class="accordion">$</button>
-    <div class="panel">
-      <p>$14.00</p>
+
+  <div class="w3-container">
+    <button onclick="myFunction('Pizza2')" class="w3-button w3-block w3-#ebebbc">
+      $</button>
+       <div id="Pizza2" class="w3-hide w3-container w3-#ebebbc w3-center w3-animate-zoom">
+        <p>$14.00</p>
+      </div>
     </div>
   </div>
+
+ 
 </section>
 
 
@@ -394,35 +413,28 @@
   <div class="baby-animals">
   <a href="https://www.youtube.com/watch?v=v0hN3UP0PQo">Learn the names of baby animals in English</a>
 </div>
+
+
+
+
+
+
 </body>
 </html>
 
 
 <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-  
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
+  function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
   }
  
-
-
-  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }  
   </script>
+
+
+
+
