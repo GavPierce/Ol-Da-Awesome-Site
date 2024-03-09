@@ -131,7 +131,13 @@
     width: 100%;
   }
 
- 
+  #yes {
+        display: none;
+    }
+    #no {
+        display: none;
+    }
+   
 
     /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
@@ -354,17 +360,7 @@
 
 <section>
   <h2>Pizza de fermentación lenta</h2>
-  <div class="flip-box">
-    <div class="flip-box-inner">
-      <div class="flip-box-front">
-        <img src="images/Panadería/Logo panadería gato.png" alt="Gato con pizza">
-      </div>
-      <div class="flip-box-back">
-       <p>Me encanta la pizza.</p>
-      </div>
-    </div>
-  </div>
-  
+   
   
   <div class="productos">
   <img src="images/Panadería/pizza hawaiana.jpg" alt="Pizza hawaiana">
@@ -395,8 +391,28 @@
     </div>
   </div>
 
- 
 </section>
+  
+<h3>¿Te encanta la pizza? ¡Aquí puedes recibir un descuento!</h3>
+<p>¿Cuándo fue la última vez que comiste pizza?</p>
+  <input id='Time' placeholder="2024" label="Year when you ate the pizza"> </input>
+  <button onclick="checkTime()">Chequea el año</button>
+
+  <h3 id="yes">Felicidades. Haz clic en el gato y usa el código para pedir tu pizza.</h3>
+  <h3 id="no">Pruébalo otra vez.</h3>
+
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="images/Panadería/Logo panadería gato.png" alt="Gato con pizza">
+      </div>
+      <div class="flip-box-back">
+       <p>Me encanta la pizza de Daniela.</p>
+      </div>
+    </div>
+  </div>
+
+
 
 
 
@@ -420,7 +436,7 @@
 
 
 </body>
-</html>
+
 
 
 <script>
@@ -432,9 +448,31 @@
       x.className = x.className.replace(" w3-show", "");
     }
   }
- 
+  </script>
+
+<script>
+  function getYear(Year) {
+    let thisYear = new Date().getFullYear();
+    return thisYear - Year;
+  }
+
+  function checkTime() {
+    let inputTime = document.getElementById('Time').value;
+    let isAtleast2 = false;
+    let checkTime;
+
+    checkTime = getYear(inputTime);
+    
+    if (checkTime > 2) {
+    let secretMessageElementNo = document.getElementById('no');
+    secretMessageElementNo.style = 'display:block';
+    } else if (checkTime <= 2) {
+        let secretMessageElementYes = document.getElementById('yes');
+        secretMessageElementYes.style = 'display:block';
+    } 
+  }
   </script>
 
 
-
+</html>
 
