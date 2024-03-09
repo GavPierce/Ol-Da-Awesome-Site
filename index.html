@@ -75,12 +75,18 @@
         display: flex;
         flex-wrap: wrap;
         margin: 10px;
-        justify-content: space-between;
+        justify-content: space-around;        
+        }
 
-        
-                 }
+        @media screen and (max-width: 600px) {
+      .flex-container {
+        display: grid;
+        }
+    }
+
      .inner-content    {
       text-align: center;
+      padding: 30px;
          }
 
     .img-comp-container {
@@ -88,7 +94,7 @@
       height: 200px; /*should be the same height as the images*/
       box-sizing: border-box;
       display: block;
-        }
+       }
        
     .img-comp-img {
       position: absolute;
@@ -100,8 +106,7 @@
     
     .img-comp-img img {
       display:block;
-      
-        }
+      }
     
     .img-comp-slider {
       position: absolute;
@@ -115,8 +120,11 @@
       border-radius: 50%;
       vertical-align: middle;
     }
-    
-      </style>
+    video {
+      display: flex;
+    }
+
+       </style>
     
     </head>
     
@@ -151,8 +159,14 @@
         <img src="images/homepage/Foccacia after.jpg" width="300" height="200">
       </div>
     </div>
+
+    <div>
+    <video width="300" height="auto" controls>
+      <source src="images/homepage/cutting the bread.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
-</div>
+
        </body>
 </html>
 
