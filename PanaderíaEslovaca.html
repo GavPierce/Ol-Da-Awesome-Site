@@ -461,9 +461,13 @@
     if (checkTime > 2) {
     let secretMessageElementNo = document.getElementById('no');
     secretMessageElementNo.style = 'display:block';
+    let secretMessageElementYes = document.getElementById('yes');
+    secretMessageElementYes.style = 'display:none';
     } else if (checkTime <= 2) {
         let secretMessageElementYes = document.getElementById('yes');
         secretMessageElementYes.style = 'display:block';
+        let secretMessageElementNo = document.getElementById('no');
+        secretMessageElementNo.style = 'display:none';
     } 
   }
   </script>
