@@ -1,0 +1,119 @@
+<html>
+  <html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing Script"
+      rel="stylesheet"
+    />
+    <title>Sobre nosotras</title>
+    <link rel="icon" type="image/x-icon" href="/images/homepage/favicon.jpg">
+
+    <style>
+      .main-title {
+        color: #f1b13c;
+        font-family: Dancing Script, serif;
+        font-size: 100px;
+        padding: 20px;
+      }
+    
+      @media screen and (max-width: 600px) {
+      .main-title {
+        font-size: 80px;
+      }
+    }
+        body {
+        text-align: center;
+        background: beige;
+        margin: 20px;
+      }
+     
+            .inner-content img  {
+        float: left;
+        border-radius: 20px;
+       width: 100px;   
+        }
+
+       .inner-content img:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+         /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    }
+    @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+        .flex-container {
+        font-size: 20px;
+        font-weight: bold;
+        color: hwb(93 8% 32%);
+        border: 3px solid white;
+        border-radius: 10px;
+        background: #cecece8a;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px;
+        justify-content: space-around;        
+        }
+
+        @media screen and (max-width: 600px) {
+      .flex-container {
+        display: grid;
+        }
+    }
+
+     .inner-content    {
+      text-align:inherit;
+      padding: 50px;
+         }
+
+    .img-comp-container {
+      position: relative;
+      height: 200px; /*should be the same height as the images*/
+      box-sizing: border-box;
+      display: block;
+       }
+       
+    .img-comp-img {
+      position: absolute;
+      width: auto;
+      height: auto;
+      overflow:hidden;
+      border-radius: 20px;
+       }
+    
+    .img-comp-img img {
+      display:block;
+      }
+    
+           </style>
+    
+    </head>
+    
+  <body>
+   
+    <h1 class="main-title">Sobre nosotras</h1>
+
+      
+    <div class="flex-container">
+      <div class="inner-content">
+          <p><img src="images/homepage/Nosotras.jpg" alt="Nosotras"> </p>
+         
+    </div>
+   
+       </body>
+</html>
+
+
