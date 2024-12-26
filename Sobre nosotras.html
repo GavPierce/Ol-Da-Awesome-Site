@@ -157,10 +157,12 @@
     <a href="./ReposteríaEslovaca" class="w3-bar-item w3-button">&#127856;Repostería Eslovaca</a>
     <a href="./Sobre nosotras.html" class="w3-bar-item w3-button">Sobre nosotras</a>
   </div>
+
 <!-- Page Content -->
 <div class="w3-teal">
   <button class="w3-button w3-teal w3-xlarge w3-left w3-hide-large" onclick="w3_open()">☰</button>
   </div>
+
   <script>
     function w3_open() {
       document.getElementById("mySidebar").style.display = "block";
@@ -181,6 +183,18 @@
     </div>
    
        </body>
+
+       <script>
+        function myFunction(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        </script>
+        
 </html>
 
 
