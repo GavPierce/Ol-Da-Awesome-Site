@@ -8,6 +8,12 @@
       href="https://fonts.googleapis.com/css?family=Dancing Script"
       rel="stylesheet"
     />
+   <link
+    href="https://fonts.googleapis.com/css?family=Dancing Script"
+    rel="stylesheet"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Productos artesanales de eslovacas</title>
     <link rel="icon" type="image/x-icon" href="/images/homepage/favicon.jpg">
 
@@ -24,6 +30,43 @@
         font-size: 80px;
       }
     }
+    .topnav {
+  background-color:  #ebebbc;
+  overflow: hidden;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+.topnav {
+  display: none;
+}   
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: hsl(244, 89%, 14%);
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  border-right: 1px solid #0c0c0c;
+  display: inline-block;
+  font-weight: bold;
+  }
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: hsl(172, 74%, 49%);
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: hsl(158, 95%, 34%);
+}
+
+
         body {
         text-align: center;
         background: beige;
@@ -111,7 +154,28 @@
     </head>
     
   <body>
-   
+    <div class="topnav" id="myTopnav">
+      <a href="./index.html">&#127968;Inicio</a>
+      <a href="./PanaderíaEslovaca">&#127838;Panadería Eslovaca</a>
+      <a href="./ReposteríaEslovaca">&#127856;Repostería Eslovaca</a>
+      <a href="./Sobre nosotras.html">Sobre nosotras</a>
+      </div>
+  
+      <!-- Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-border-right w3-animate-left" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">&times;</button>
+    <a href="./index.html" class="w3-bar-item w3-button">&#127968;Inicio</a>
+    <a href="./PanaderíaEslovaca" class="w3-bar-item w3-button">&#127838;Panadería Eslovaca</a>
+    <a href="./ReposteríaEslovaca" class="w3-bar-item w3-button">&#127856;Repostería Eslovaca</a>
+    <a href="./Sobre nosotras.html" class="w3-bar-item w3-button">Sobre nosotras</a>
+  </div>
+  
+  <!-- Page Content -->
+  <div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge w3-left w3-hide-large" onclick="w3_open()">☰</button>
+    </div>
+  
+  
     <h1 class="main-title">Productos artesanales</h1>
 
       <div class="logos">
@@ -234,3 +298,13 @@ function initComparisons() {
   }
 }
 </script>
+
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
