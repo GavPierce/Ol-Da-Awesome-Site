@@ -1,0 +1,41 @@
+.topnav {
+  background-color:  #ebebbc;
+  overflow: hidden;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+.topnav {
+  display: none;
+}   
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: hsl(244, 89%, 14%);
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  border-right: 1px solid #0c0c0c;
+  display: inline-block;
+  font-weight: bold;
+  }
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: hsl(172, 74%, 49%);
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: hsl(158, 95%, 34%);
+}
+
+body {
+  text-align: center;
+  background: beige;
+  margin: 20px;
+}
