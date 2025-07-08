@@ -63,16 +63,17 @@ div.logos{
         display: flex;
         flex-wrap: wrap;
         margin: 10px;
-        justify-content: space-around;        
+        justify-content: space-around;  
+        padding: 20px;      
         }
 
-        @media screen and (max-width: 600px) {
-      .flex-container {
-        display: grid;
-        }
-    }
+        @media screen and (max-width: 992px) {
+        .flex-container {
+        display: block;
+       }   
+       }
 
-     .inner-content    {
+      .inner-content    {
       text-align:inherit;
       padding: 50px;
          }
@@ -110,6 +111,7 @@ div.logos{
     }
     video {
       display: flex;
+      border-radius: 20px;
     }
 
        </style>
@@ -160,6 +162,7 @@ div.logos{
     </div>
    
     <div class="img-comp-container">
+      <h3>Focaccia</h3>
       <div class="img-comp-img">
         <img src="images/homepage/Foccacia before.jpg" width="300" height="200">
       </div>
@@ -169,11 +172,14 @@ div.logos{
     </div>
 
     <div>
+      <h3>Pan de campo</h3>
     <video width="300" height="auto" controls>
       <source src="images/homepage/cutting the bread.mp4" type="video/mp4">
       </video>
     </div>
   </div>
+  </div>
+   </div>
 
        </body>
 </html>
