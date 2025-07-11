@@ -1,7 +1,8 @@
 .topnav {
   background-color:  #ebebbc;
   overflow: hidden;
-  text-align: center;
+  position: sticky;
+  top: 0;
 }
 
 @media screen and (max-width: 992px) {
