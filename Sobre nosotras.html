@@ -47,8 +47,15 @@
         grid-template-rows: 1fr 1fr 1fr;
         gap: 50px;
         padding: 50px;
+        box-sizing: border-box;
         }
 
+         @media screen and (max-width: 600px) {
+       .grid-container {
+        display: flex;
+        flex-wrap: wrap;        
+      }
+    }
         .grid-item1 img {
        border-radius: 20px;
        height: 200px;   
