@@ -67,23 +67,20 @@
         padding: 10px;      
         }
 
-         @media screen and (max-width: 400px) {
-    .grid-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  }
-  
+     
       .grid-item1    {
       text-align: left;
       grid-column: 1 / span 2;
       margin-left: 60px;
       margin-top: 60px;
+      display: flex;
+      flex-wrap: wrap;
        }
 
       @media screen and (max-width: 600px) {
      .grid-item1 {
     margin-left: 20px;
+    margin-top: 20px;
     }
     }
 
