@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="style.css">
 
 <style>
-  .main-title {
+
+   .main-title {
     color: #f1b13c;
     font-family: Dancing Script, serif;
     font-size: 100px;
@@ -40,6 +41,7 @@
       padding: 20px;
       margin-bottom: 50px;
         }
+
       div.logos img {
         width: 300px;
         border-radius: 20px;
@@ -48,13 +50,9 @@
        div.logos img:hover {
         transform: scale(1.2);
       }
-      .inner-content img  {
-        float: left;
-        border-radius: 20px;
-        width: 100px;   
-        }
 
-        .flex-container {
+      
+        .grid-container {
         font-size: 20px;
         font-weight: bold;
         color: hwb(93 8% 32%);
@@ -62,24 +60,39 @@
         border-radius: 10px;
         background: #cecece8a;
         display: grid;
-        gap: 20px;
-        margin: 10px;
-        justify-content: space-around;  
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+        margin: 20px;
         padding: 20px;      
         }
 
   
-      .inner-content    {
+      .grid-item1    {
       text-align: left;
-      padding: 50px;
-         }
+      grid-column: 1 / span 2;
+      margin-left: 60px;
+      margin-top: 60px;
+       }
 
-    .img-comp-container {
+        @media screen and (max-width: 600px) {
+     .grid-item1 {
+    margin-left: 20px;
+    }
+    }
+
+    .grid-item3 {
       position: relative;
       height: 200px; /*should be the same height as the images*/
       box-sizing: border-box;
       display: block;
-       }
+      }
+
+    @media screen and (max-width: 600px) {
+    .grid-item3 {
+     grid-row: 3;
+    }
+    }
        
     .img-comp-img {
       position: absolute;
@@ -105,9 +118,8 @@
       border-radius: 50%;
       vertical-align: middle;
     }
-    video {
-      display: flex;
-      border-radius: 20px;
+    .grid-item2 video {
+       border-radius: 20px;
     }
 
        </style>
@@ -147,14 +159,20 @@
 </div>
 
 
-    <div class="flex-container">
-      <div class="inner-content">
+    <div class="grid-container">
+      <div class="grid-item1">
         <p>Bienvenidos a nuestra Panadería y Repostería Eslovaca.</p>
         <p>Descubre el placer de probar nuestros deliciosos panes y dulces artesanales.</p>
         </div>
-        
-   
-    <div class="img-comp-container">
+          
+
+    <div class="grid-item2">
+      <video width="300" height="auto" controls>
+      <source src="images/homepage/cutting the bread.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="grid-item3">
      
       <div class="img-comp-img">
         <img src="images/homepage/Foccacia before.jpg" width="300" height="200">
@@ -162,13 +180,6 @@
       <div class="img-comp-img img-comp-overlay">
         <img src="images/homepage/Foccacia after.jpg" width="300" height="200">
       </div>
-    </div>
-
-    <div>
-     
-    <video width="400" height="auto" controls>
-      <source src="images/homepage/cutting the bread.mp4" type="video/mp4">
-      </video>
     </div>
   </div>
   </div>
