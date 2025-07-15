@@ -64,9 +64,15 @@
         grid-template-rows: 1fr 1fr 1fr;
         gap: 10px;
         margin: 20px;
-        padding: 20px;      
+        padding: 10px;      
         }
 
+         @media screen and (max-width: 400px) {
+    .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  }
   
       .grid-item1    {
       text-align: left;
@@ -75,7 +81,7 @@
       margin-top: 60px;
        }
 
-        @media screen and (max-width: 600px) {
+      @media screen and (max-width: 600px) {
      .grid-item1 {
     margin-left: 20px;
     }
@@ -120,7 +126,14 @@
     }
     .grid-item2 video {
        border-radius: 20px;
+       width: 300px;
     }
+
+      @media screen and (max-width: 400px) {
+    .grid-item2 video {
+    width: 200px;
+  }
+  }
 
        </style>
     
@@ -167,7 +180,7 @@
           
 
     <div class="grid-item2">
-      <video width="300" height="auto" controls>
+      <video controls>
       <source src="images/homepage/cutting the bread.mp4" type="video/mp4">
       </video>
     </div>
